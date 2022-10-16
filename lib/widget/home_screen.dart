@@ -2,9 +2,10 @@
 
 import 'package:financial/transaction.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class HomeScreen extends StatelessWidget {
-   HomeScreen({Key? key}) : super(key: key);
+  HomeScreen({Key? key}) : super(key: key);
 
   final List<Transaction> transactions = [
     Transaction(
@@ -53,7 +54,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     padding: EdgeInsets.all(10),
                     child: Text(
-                      tx.amount.toString(),
+                      '\$${tx.amount}',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
@@ -72,7 +73,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        tx.date.toString(),
+                        DateFormat().add_yMMMd().format(tx.date!),
                         style: TextStyle(
                           color: Colors.grey,
                         ),
