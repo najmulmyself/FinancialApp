@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import '../models/transaction.dart';
 
 class UserTransaction extends StatefulWidget {
-
   @override
   State<UserTransaction> createState() => _UserTransactionState();
 }
@@ -26,7 +25,7 @@ class _UserTransactionState extends State<UserTransaction> {
     ),
   ];
 
-  addNewTransaction(title,amount){
+  addNewTransaction(title, amount) {
     final newTx = Transaction(
       title: title,
       amount: amount,
@@ -37,6 +36,7 @@ class _UserTransactionState extends State<UserTransaction> {
       _userTransaction.add(newTx);
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Column(

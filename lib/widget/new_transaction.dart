@@ -31,7 +31,6 @@ class NewTransaction extends StatelessWidget {
               style: TextButton.styleFrom(
                 primary: Colors.purple,
               ),
-              // textColor: Colors.purple,
               onPressed: () {
                 addTx(
                   titleController.text,
