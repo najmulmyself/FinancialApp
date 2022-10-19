@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class NewTransaction extends StatelessWidget {
   final Function addTx;
-  NewTransaction(this.addTx);
+  NewTransaction(this.addTx, {Key? key}) : super(key: key);
 
   final titleController = TextEditingController();
   final amountController = TextEditingController();
@@ -16,7 +16,7 @@ class NewTransaction extends StatelessWidget {
     }
     addTx(
       titleController.text,
-      double.parse(amountController.text),
+      double.parse(amountController.text), 
     );
   }
 
